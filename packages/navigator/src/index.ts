@@ -13,16 +13,11 @@ import '../style/index.css';
  */
 async function main(): Promise<void> {
   const app = new Gator();
-  const mods = [
-    require('./plugins/paths'),
-    require('./plugins/navigator'),
-    require('./plugins/top')
-  ];
+  const mods = [require('./plugins/navigator'), require('./plugins/top')];
 
   app.registerPluginModules(mods);
 
   await app.start();
-  await app.restored;
 }
 
 window.addEventListener('load', main);
