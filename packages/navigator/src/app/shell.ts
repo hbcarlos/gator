@@ -90,9 +90,6 @@ export class GatorShell extends Widget {
       return;
     }
 
-    // make the widget closable
-    widget.title.closable = true;
-
     const dock = this._main;
 
     const { title } = widget;
